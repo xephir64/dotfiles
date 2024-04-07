@@ -184,10 +184,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	//fmt.Println("Selected language:", lang)
-	//fmt.Println("Selected city:", city)
-	//fmt.Println("Selected unit:", unit)
-
 	weather_url := "https://wttr.in/" + city + "?format=j2&lang=" + lang
 	resp, err := http.Get(weather_url)
 	if err != nil {

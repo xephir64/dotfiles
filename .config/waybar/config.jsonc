@@ -6,7 +6,7 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 44,
-    "modules-left": ["clock", "custom/weather", "wlr/workspaces"],
+    "modules-left": ["clock", "custom/weather", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["network", "battery", "cpu", "memory", "backlight", "pulseaudio", "tray"],
     "hyprland/window": {
@@ -23,11 +23,11 @@
 
     "wlr/workspaces": {
 	"active-only": false,
-	"all-outputs": true,
+	"all-outputs": false,
+	"disable-scroll": false,
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
         "format": "{icon}",
-        "all-outputs": true,
         "on-click": "activate"
     },
     
@@ -47,7 +47,8 @@
     },
 
     "clock": {
-        "format": "{: %H:%M %p   %a, %e %b}", // Day, Day Number, Month
+        "format": " {:%H:%M %p   %a, %e %b}", // Day, Day Number, Month
+	"tooltip" : true,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 

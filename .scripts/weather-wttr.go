@@ -211,7 +211,7 @@ func main() {
 	weather_emoji := get_weather_emoji(weather_data.CurrentCondition[0].WeatherCode)
 
 	var waybar_weather WaybarWeather
-	waybar_weather.Text = weather_emoji + temperature + "°" + unit
+	waybar_weather.Text = weather_emoji + " " + temperature + "°" + unit
 	waybar_weather.Tooltip =
 		"City: " + weather_data.NearestArea[0].AreaName[0].Value + "\n" +
 			"Wind: " + weather_data.CurrentCondition[0].WindspeedKmph + " km/h \n" +
